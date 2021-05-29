@@ -1,0 +1,5 @@
+web:
+    build: .
+    command: node dist/index.js
+    ports:
+      - "3000:3000"

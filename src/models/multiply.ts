@@ -1,6 +1,6 @@
-import {EquationInterface} from "./interfaces/equation"
+import { EquationInterface } from "./interfaces/equation";
 
-export class AddModel implements EquationInterface
+export class MultiplyModel implements EquationInterface
 {
     numberOne: number;
     numberTwo: number;
@@ -11,6 +11,6 @@ export class AddModel implements EquationInterface
     }
 
     getResult(): number {
-        return this.numberOne + this.numberTwo;
+        return this.numberOne * this.numberTwo;
     }
 }

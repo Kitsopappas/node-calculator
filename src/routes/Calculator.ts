@@ -16,7 +16,8 @@ export class CalculatorRouter {
         this.init();
     }
 
-    addTwoNumbers(req: Request, res: Response, next: NextFunction) {
+    addTwoNumbers(req: Request, res: Response, next: NextFunction) 
+    {
         let x: number = +req.params.numberOne;
         let y: number = +req.params.numberTwo;
 
@@ -24,7 +25,8 @@ export class CalculatorRouter {
         res.status(200).send(addViewModel.json);
     }
 
-    multiplyTwoNumbers(req: Request, res: Response, next: NextFunction) {
+    multiplyTwoNumbers(req: Request, res: Response, next: NextFunction) 
+    {
         let x: number = +req.params.numberOne;
         let y: number = +req.params.numberTwo;
 
@@ -44,7 +46,8 @@ export class CalculatorRouter {
      * Take each handler, and attach to one of the Express.Router's
      * endpoints.
      */
-    init() {
+    init() 
+    {
         this.router.post('/add/:numberOne/:numberTwo', this.addTwoNumbers);
         this.router.post('/multiply/:numberOne/:numberTwo', this.multiplyTwoNumbers);
         this.router.post('/subtract/:numberOne/:numberTwo', this.subtractTwoNumbers);

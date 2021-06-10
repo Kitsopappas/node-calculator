@@ -34,12 +34,12 @@ export class CalculatorRouter {
         res.status(200).send(multiplyViewModel.json);
     }
 
-    subtractTwoNumbers(req: Request, res: Response, next: NextFunction) {
+    subtractTwoNumbers(req: Request, res: Response, next: NextFunction) 
+    {
         let x: number = +req.params.numberOne;
         let y: number = +req.params.numberTwo;
 
-        let subtractionViewModel = new SubtractionViewModel(x, y);
-        res.status(200).send(subtractionViewModel.json);
+        res.status(200).send(new SubtractionViewModel(x, y).json);
     }
 
     /**
